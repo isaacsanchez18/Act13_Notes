@@ -16,8 +16,6 @@ export class AppComponent {
     $(document).ready(function() {
       $('.collapsible').collapsible();
     });
-    $('#textarea1').val('');
-    textareaAutoResize($('#textarea1'));
   }
 
   miFuncion(el1: HTMLInputElement, el2: HTMLInputElement) {
@@ -33,12 +31,15 @@ export class AppComponent {
       nota.tit = el1.value;
       nota.des = el2.value;
       this.res.unshift(nota);
-      console.log(nota.des);
+      //console.log(nota.des);
+      $('#first_name').val('');
+      $('#textarea1').val('');
+      textareaAutoResize($('#textarea1'));
     }
   }
 
-  borrarInput(titulo: HTMLInputElement, descripcion: HTMLInputElement) {
+  /*borrarInput(titulo: HTMLInputElement, descripcion: HTMLInputElement) {
     titulo.value = '';
     descripcion.value = '';
-  }
+  }*/
 }
